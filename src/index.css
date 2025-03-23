@@ -954,3 +954,1054 @@ h2.section-title::after {
     font-size: 3rem;
   }
 }
+
+/* Route Engine Section - Rota tanımlamaları bölümü stilleri */
+.route-section pre {
+  font-family: 'Fira Code', 'Source Code Pro', monospace;
+  white-space: pre-wrap;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.route-section pre::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.route-section pre::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+
+.route-section pre::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+.route-config-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.route-feature-list {
+  margin-top: 20px;
+  padding-left: 10px;
+}
+
+.route-feature-list li {
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 20px;
+  list-style-type: none;
+  animation: slideInRight 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+.route-feature-list li:nth-child(1) { animation-delay: 0.1s; }
+.route-feature-list li:nth-child(2) { animation-delay: 0.2s; }
+.route-feature-list li:nth-child(3) { animation-delay: 0.3s; }
+.route-feature-list li:nth-child(4) { animation-delay: 0.4s; }
+.route-feature-list li:nth-child(5) { animation-delay: 0.5s; }
+
+.route-feature-list li::before {
+  content: "●";
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+  font-size: 12px;
+}
+
+.features-container {
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 30px;
+  border-left: 4px solid var(--accent-color);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.features-title {
+  color: var(--accent-color);
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.code-block {
+  position: relative;
+  margin-top: 20px;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.code-block::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0)
+  );
+  transform: skewX(-25deg);
+  animation: codeScan 3s infinite;
+}
+
+@keyframes codeScan {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 200%;
+  }
+}
+
+/* Route Engine Section - Ek Stiller */
+.route-card {
+  background-color: var(--card-bg-color);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.route-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+.route-card-header {
+  background-color: rgba(var(--primary-color-rgb), 0.2);
+  border-bottom: 1px solid var(--border-color);
+  padding: 15px 20px;
+}
+
+.route-card-header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.route-card-title {
+  color: white;
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.endpoint-title {
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.config-label {
+  color: white;
+  margin-right: 5px;
+  font-size: 0.8rem;
+}
+
+.config-value {
+  font-weight: bold;
+}
+
+.config-low {
+  background-color: rgba(76, 175, 80, 0.4);
+}
+
+.config-low .config-value {
+  color: #4CAF50;
+}
+
+.config-medium {
+  background-color: rgba(255, 193, 7, 0.4);
+}
+
+.config-medium .config-value {
+  color: #FFC107;
+}
+
+.config-high {
+  background-color: rgba(244, 67, 54, 0.4);
+}
+
+.config-high .config-value {
+  color: #F44336;
+}
+
+.code-block {
+  background-color: rgba(var(--primary-color-rgb), 0.1);
+  border-radius: 8px;
+  margin-top: 20px;
+  border: 1px solid rgba(var(--border-color-rgb), 0.5);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.code-block pre {
+  padding: 20px;
+  font-family: 'Fira Code', 'Source Code Pro', monospace;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.features-container {
+  background-color: rgba(var(--accent-color-rgb), 0.2);
+}
+
+/* Syntax Section Stilleri */
+.syntax-section {
+  position: relative;
+  overflow: hidden;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background-image: radial-gradient(circle at 70% 30%, var(--primary-color-15) 0%, transparent 60%);
+}
+
+.syntax-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  border: none;
+}
+
+.syntax-tabs .nav-item {
+  margin: 0 10px;
+}
+
+.syntax-tabs .nav-link {
+  padding: 10px 20px;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.syntax-tabs .nav-link:hover:not(.active) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.syntax-tabs .nav-link.active {
+  background-color: rgba(var(--primary-color-rgb), 0.2);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 10px rgba(var(--primary-color-rgb), 0.3);
+}
+
+.tab-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 50%;
+  margin-right: 8px;
+  font-size: 0.8rem;
+}
+
+.tab-icon.good {
+  background-color: rgba(76, 175, 80, 0.7);
+  color: white;
+}
+
+.tab-icon.bad {
+  background-color: rgba(244, 67, 54, 0.7);
+  color: white;
+}
+
+.syntax-tab-content {
+  animation: fadeIn 0.5s ease;
+}
+
+.syntax-card {
+  background-color: var(--card-bg-color);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.syntax-title {
+  color: white;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.syntax-description {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.syntax-code {
+  max-height: 600px;
+  overflow-y: auto;
+  margin-top: 0;
+  background-color: rgba(30, 30, 30, 0.8);
+  backdrop-filter: blur(5px);
+  border-radius: 8px;
+  border: 1px solid rgba(var(--primary-color-rgb), 0.3);
+}
+
+.syntax-code pre {
+  font-family: 'Fira Code', 'Source Code Pro', monospace;
+  font-size: 0.9rem;
+  padding: 20px;
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.6;
+  white-space: pre-wrap;
+  border-radius: 0;
+  margin-bottom: 0;
+}
+
+.syntax-code::-webkit-scrollbar {
+  width: 6px;
+}
+
+.syntax-code::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.syntax-code::-webkit-scrollbar-thumb {
+  background-color: rgba(var(--accent-color-rgb), 0.5);
+  border-radius: 10px;
+}
+
+/* Responsif tasarım için */
+@media (max-width: 768px) {
+  .syntax-tabs .nav-link {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+  
+  .syntax-title {
+    font-size: 1.2rem;
+  }
+  
+  .syntax-code {
+    max-height: 400px;
+  }
+  
+  .syntax-code pre {
+    font-size: 0.8rem;
+  }
+}
+
+/* Öğrenme Bölümü Stilleri */
+.learning-section {
+  position: relative;
+  overflow: hidden;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background-image: radial-gradient(circle at 40% 60%, var(--primary-color-15) 0%, transparent 60%);
+}
+
+.learning-card-title {
+  color: white;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.learning-difficulty-card,
+.learning-time-card,
+.learning-path-card,
+.learning-notes-card {
+  background-color: var(--card-bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  height: 100%;
+  backdrop-filter: blur(5px);
+}
+
+.learning-difficulty-card:hover,
+.learning-time-card:hover,
+.learning-path-card:hover,
+.learning-notes-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* Zorluk Göstergesi */
+.difficulty-meter {
+  width: 100%;
+  padding: 10px 0;
+}
+
+.difficulty-progress {
+  position: relative;
+  background: linear-gradient(to right, 
+    rgba(76, 175, 80, 0.5) 0%, 
+    rgba(255, 193, 7, 0.5) 50%, 
+    rgba(244, 67, 54, 0.5) 100%
+  ) !important;
+}
+
+.difficulty-value {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+  font-size: 0.9rem;
+}
+
+.difficulty-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.85rem;
+}
+
+/* Öğrenme Süresi */
+.learning-time-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.time-icon {
+  font-size: 2.5rem;
+  margin-right: 20px;
+  opacity: 0.9;
+}
+
+.time-value {
+  display: flex;
+  flex-direction: column;
+}
+
+.time-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  margin-bottom: 5px;
+}
+
+.time-description {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Öğrenme Adımları */
+.learning-card-description {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 25px;
+  font-size: 1rem;
+}
+
+.learning-steps {
+  position: relative;
+  padding-left: 10px;
+}
+
+.learning-steps:before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.learning-step {
+  display: flex;
+  margin-bottom: 25px;
+  position: relative;
+  z-index: 1;
+}
+
+.step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-weight: bold;
+  color: white;
+  margin-right: 15px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.step-content {
+  flex-grow: 1;
+  padding-top: 5px;
+}
+
+.step-title {
+  color: white;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.step-description {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+/* Notlar */
+.learning-notes {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.card-title-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+/* Responsive Düzenlemeler */
+@media (max-width: 768px) {
+  .learning-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  
+  .learning-time-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .time-icon {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  
+  .step-number {
+    width: 32px;
+    height: 32px;
+    font-size: 0.9rem;
+  }
+  
+  .step-title {
+    font-size: 1rem;
+  }
+  
+  .learning-card-title {
+    font-size: 1.2rem;
+  }
+}
+
+/* Performans Bölümü Stilleri - Güncellendi */
+.performance-section {
+  position: relative;
+  overflow: hidden;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background-image: radial-gradient(circle at 60% 30%, var(--primary-color-15) 0%, transparent 60%);
+}
+
+.performance-metrics-card,
+.performance-notes-card {
+  background-color: var(--card-bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  height: 100%;
+  backdrop-filter: blur(5px);
+  margin-bottom: 20px;
+}
+
+.performance-metrics-card:hover,
+.performance-notes-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.performance-card-title {
+  color: white;
+  font-size: 1.4rem;
+  margin-bottom: 25px;
+  font-weight: 600;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Metrik öğesi stilleri - Güncellendi */
+.metric-item {
+  margin-bottom: 25px;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.metric-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateX(5px);
+}
+
+.metric-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.metric-name {
+  display: flex;
+  align-items: center;
+}
+
+.metric-icon {
+  margin-right: 10px;
+  font-size: 1.2rem;
+  color: var(--accent-color);
+  width: 24px;
+  text-align: center;
+}
+
+.metric-label {
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.metric-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  min-width: 100px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.metric-value-good {
+  background-color: rgba(76, 175, 80, 0.3);
+  color: #4CAF50;
+  border: 1px solid rgba(76, 175, 80, 0.5);
+}
+
+.metric-value-medium {
+  background-color: rgba(255, 193, 7, 0.3);
+  color: #FFC107;
+  border: 1px solid rgba(255, 193, 7, 0.5);
+}
+
+.metric-value-bad {
+  background-color: rgba(244, 67, 54, 0.3);
+  color: #F44336;
+  border: 1px solid rgba(244, 67, 54, 0.5);
+}
+
+/* Performans sonuç kutusu */
+.performance-result {
+  margin-top: 30px;
+  padding: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}
+
+.performance-rating {
+  display: flex;
+  align-items: center;
+}
+
+.rating-icon {
+  font-size: 2.5rem;
+  margin-right: 20px;
+  line-height: 1;
+  background-color: rgba(var(--accent-color-rgb), 0.2);
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(var(--accent-color-rgb), 0.4);
+}
+
+.rating-text h4 {
+  color: white;
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+}
+
+.rating-description {
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Notlar bölümü */
+.performance-notes {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.performance-subtitle {
+  color: white;
+  font-size: 1.15rem;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.performance-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  font-size: 0.9rem;
+}
+
+.performance-icon.good {
+  background-color: rgba(76, 175, 80, 0.3);
+  color: #4CAF50;
+}
+
+.performance-icon.bad {
+  background-color: rgba(244, 67, 54, 0.3);
+  color: #F44336;
+}
+
+.performance-list {
+  list-style-type: none;
+  padding-left: 15px;
+}
+
+.performance-list li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.performance-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--accent-color);
+  font-size: 1.2rem;
+}
+
+/* Mobil düzenlemeler */
+@media (max-width: 768px) {
+  .performance-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  
+  .performance-card-title {
+    font-size: 1.2rem;
+  }
+  
+  .rating-icon {
+    font-size: 2rem;
+    width: 60px;
+    height: 60px;
+  }
+  
+  .metric-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .metric-badge {
+    margin-top: 10px;
+    align-self: flex-end;
+  }
+}
+
+/* Senaryolar Bölümü Stilleri */
+.scenarios-section {
+  position: relative;
+  overflow: hidden;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background-image: radial-gradient(circle at 30% 70%, var(--primary-color-15) 0%, transparent 60%);
+}
+
+/* Sekmeler */
+.scenarios-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  gap: 15px;
+}
+
+.scenario-tab {
+  padding: 10px 20px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
+  font-weight: 500;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.scenario-tab:hover:not(.active) {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-3px);
+}
+
+.scenario-tab.active {
+  background-color: rgba(var(--primary-color-rgb), 0.3);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 15px rgba(var(--primary-color-rgb), 0.4);
+  transform: translateY(-3px);
+}
+
+.scenario-tab-icon {
+  font-size: 1.1rem;
+}
+
+/* Senaryo Kartları */
+.scenario-card {
+  height: 100%;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background-color: var(--card-bg-color);
+  border: 1px solid var(--border-color);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.scenario-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+.best-for-card {
+  border-top: 4px solid #4CAF50;
+}
+
+.not-recommended-card {
+  border-top: 4px solid #F44336;
+}
+
+.use-case-card {
+  border-top: 4px solid #3F51B5;
+}
+
+/* Kullanım Durumu Öğeleri */
+.use-case-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.use-case-icon {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  color: var(--accent-color);
+  box-shadow: 0 0 15px rgba(var(--accent-color-rgb), 0.3);
+  transition: all 0.3s ease;
+}
+
+.best-for-card .use-case-icon {
+  color: #4CAF50;
+}
+
+.not-recommended-card .use-case-icon {
+  color: #F44336;
+}
+
+.use-case-card .use-case-icon {
+  color: #3F51B5;
+}
+
+.scenario-card:hover .use-case-icon {
+  transform: scale(1.1) rotate(10deg);
+}
+
+.use-case-content {
+  flex-grow: 1;
+}
+
+.use-case-title {
+  color: white;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.use-case-description {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+/* Framework Seçim Rehberi */
+.framework-decision-helper {
+  margin-top: 60px;
+}
+
+.decision-card {
+  background-color: rgba(var(--primary-color-rgb), 0.15);
+  border: 1px solid rgba(var(--primary-color-rgb), 0.3);
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.decision-card:hover {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+  transform: translateY(-5px);
+}
+
+.decision-title {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.decision-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--accent-color);
+  border-radius: 2px;
+  box-shadow: 0 0 10px var(--accent-color);
+}
+
+.decision-description {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.decision-list {
+  background-color: transparent;
+  border: none;
+}
+
+.decision-item {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 10px;
+  padding: 12px 20px;
+  color: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.decision-item:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  transform: translateX(5px);
+}
+
+.decision-bullet {
+  color: var(--accent-color);
+  margin-right: 10px;
+  font-size: 0.8rem;
+}
+
+.decision-item strong {
+  color: white;
+  margin-right: 5px;
+}
+
+/* Responsif tasarım ayarlamaları */
+@media (max-width: 768px) {
+  .scenarios-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  
+  .scenarios-tabs {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .scenario-tab {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .use-case-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .use-case-title {
+    margin-top: 10px;
+  }
+  
+  .decision-item {
+    padding: 10px 15px;
+  }
+}

@@ -993,8 +993,8 @@ const StructureSection = ({ framework }) => {
           </Col>
         </Row>
       </Container>
-    </section>
-  );
+  </section>
+); 
 };
 
 export default StructureSection; 
