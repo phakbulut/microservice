@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/microservice/static/css/main.37dc7a35.css",
-    "main.js": "/microservice/static/js/main.a1cc054a.js",
+    "main.js": "/microservice/static/js/main.e6de0125.js",
     "index.html": "/microservice/index.html",
     "main.37dc7a35.css.map": "/microservice/static/css/main.37dc7a35.css.map",
-    "main.a1cc054a.js.map": "/microservice/static/js/main.a1cc054a.js.map"
+    "main.e6de0125.js.map": "/microservice/static/js/main.e6de0125.js.map"
   },
   "entrypoints": [
     "static/css/main.37dc7a35.css",
-    "static/js/main.a1cc054a.js"
+    "static/js/main.e6de0125.js"
   ]
 }
