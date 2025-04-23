@@ -51,7 +51,7 @@ const frameworkHistories = {
     title: 'Restlet Tarihçesi',
     creator: 'Jérôme Louvel',
     year: '2005',
-    description: 'Restlet, REST mimarisini Java’da uygulamak amacıyla Jérôme Louvel tarafından geliştirildi. Roy Fielding’in REST prensiplerine sadık kalarak, web API’larının oluşturulmasını kolaylaştırmayı hedefledi. İlk olarak bireysel bir çaba olarak başlayan proje, zamanla niş bir topluluk tarafından benimsendi ancak büyük ölçekli framework’lere karşı sınırlı bir popülarite elde etti.',
+    description: 'Restlet, REST mimarisini Java’da uygulamak amacıyla Jérôme Louvel tarafından geliştirildi. Roy Fielding’in REST prensiplerine sadık kalarak, web API’larının oluşturulmasını kolaylaştırmayı hedefledi. İlk olarak bireysel bir çaba olarak başlayan proje, zamanla niş bir topluluk tarafından benimsendi ancak büyük ölçekli framework’lere karşı sınırlı bir popülarite elde etti. 2020 yılından sonra yeni sürüm yayınlanmıyor.',
     milestones: [
       '2005 - Proje başlangıcı: REST odaklı ilk Java framework’lerinden biri olarak dikkat çekti.',
       '2009 - İlk kararlı sürüm: Küçük ölçekli projeler için güvenilir bir seçenek haline geldi.',

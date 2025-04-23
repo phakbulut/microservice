@@ -181,4 +181,4 @@ const EloquentSection = ({ framework }) => {
   );
 };
 
-export default EloquentSection; 
+export default EloquentSection;

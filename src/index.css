@@ -73,7 +73,7 @@ h1, h2, h3 {
 }
 
 .framework-slider {
-  width: 100%;
+  width: 40%;
   max-width: 1000px;
   display: flex;
   align-items: center;
@@ -91,12 +91,12 @@ h1, h2, h3 {
   padding: 0;
 }
 
-.framework-logo {
-  transition: all 0.4s ease, filter 0.5s ease;
-  max-height: 40px;
-  opacity: 0.7;
-  width: auto;
-  object-fit: contain;
+.framework-scroller {
+  display: flex;
+  position: relative;
+  align-items: center;
+  will-change: transform;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .framework-logo-container {
@@ -105,17 +105,26 @@ h1, h2, h3 {
   align-items: center;
   position: relative;
   cursor: pointer;
-  min-width: 80px;
+  min-width: 100px;
+  width: 100px;
   height: 60px;
   transition: all 0.3s ease;
-  padding: 0 10px;
-  margin: 0 10px;
+  padding: 0;
   z-index: 1;
   border-radius: 30px;
+  flex-shrink: 0;
 }
 
 .framework-logo-container:hover:not(.active) {
   background-color: rgba(255, 255, 255, 0.1);
+}
+
+.framework-logo {
+  transition: all 0.4s ease, filter 0.5s ease;
+  max-height: 40px;
+  opacity: 0.7;
+  width: auto;
+  object-fit: contain;
 }
 
 .framework-logo-container.active {
@@ -245,7 +254,7 @@ h1, h2, h3 {
   font-size: 2rem;
   cursor: pointer;
   z-index: 20;
-  transition: all 0.3s ease, color 0.5s ease, background-color 0.5s ease, text-shadow 0.5s ease;
+  transition: all 0.3s ease, color 0.5s ease, background-color 0.5s ease, text-shadow 0.5s ease, opacity 0.3s ease;
   width: 30px;
   height: 30px;
   display: flex;
@@ -256,7 +265,12 @@ h1, h2, h3 {
   color: white;
 }
 
-.slider-arrow:hover {
+.slider-arrow:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.slider-arrow:not(:disabled):hover {
   transform: translateY(-50%) scale(1.1);
 }
 
@@ -308,15 +322,6 @@ h1, h2, h3 {
   padding-top: 120px;
   transition: background-color 0.5s ease;
   scroll-margin-top: 90px;
-}
-
-/* Scroller */
-.framework-scroller {
-  display: flex;
-  transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
-  position: relative;
-  will-change: transform;
-  align-items: center;
 }
 
 /* Timeline stilleri */

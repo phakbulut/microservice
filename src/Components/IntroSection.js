@@ -3,11 +3,11 @@ import { Container } from 'reactstrap';
 import { useSelector, useDispatch } from 'react-redux';
 
 const frameworks = [
-  { id: 'dropwizard', name: 'Dropwizard', logo: '/logos/dropwizard.png' },
-  { id: 'vertx', name: 'Vert.x', logo: '/logos/vertx.png' },
-  { id: 'spring', name: 'Spring Boot', logo: '/logos/spring.png' },
-  { id: 'restlet', name: 'Restlet', logo: '/logos/restlet.png' },
-  { id: 'spark', name: 'Spark', logo: '/logos/spark.png' },
+  { id: 'dropwizard', name: 'Dropwizard', logo: `${process.env.PUBLIC_URL}/logos/dropwizard.png` },
+  { id: 'vertx', name: 'Vert.x', logo: `${process.env.PUBLIC_URL}/logos/vertx.png` },
+  { id: 'spring', name: 'Spring Boot', logo: `${process.env.PUBLIC_URL}/logos/spring.png` },
+  { id: 'restlet', name: 'Restlet', logo: `${process.env.PUBLIC_URL}/logos/restlet.png` },
+  { id: 'spark', name: 'Spark', logo: `${process.env.PUBLIC_URL}/logos/spark.png` },
 ];
 
 const IntroSection = () => {
@@ -51,11 +51,15 @@ const IntroSection = () => {
         <div className="intro-content">
           <h1 className="intro-title" style={titleStyle}>Java Frameworkleri</h1>
           <p style={textStyle}>
-            Bu sunum, modern Java frameworklerini derinlemesine inceleyerek 
+            Bu sunum, Java frameworklerini derinlemesine inceleyerek 
             hangi projelerde hangi frameworkün daha uygun çözüm olduğunu anlamanıza 
             yardımcı olmayı amaçlıyor. Her frameworkün güçlü ve zayıf yanlarını ve kullanım senaryolarını
             öğretiyor
+           
           </p>
+          <h4 className="" style={titleStyle}> İbrahim Furkan Akbulut</h4>
+          <h4 className="" style={titleStyle}>Hatice Biçen</h4>
+
           
           <div className="intro-logos">
             {frameworks.map((fw) => (

@@ -24,7 +24,7 @@ const criteria = [
   },
   { 
     id: 'eloquent', 
-    title: 'Veritabanı Desteği', 
+    title: 'Veritabanı Özellikleri', 
     description: 'ORM çözümleri ve veritabanı entegrasyonu',
     icon: '💾'
   },
@@ -36,7 +36,7 @@ const criteria = [
   },
   { 
     id: 'syntax', 
-    title: 'Sözdizimi', 
+    title: 'Syntax', 
     description: 'Kod yazım şekli ve geliştirici deneyimi',
     icon: '⌨️'
   },
